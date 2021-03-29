@@ -19,7 +19,7 @@ $(document).ready(function () {
         const objResult = JSON.parse(result);
 
         if (Object.keys(objResult).length === 0) {
-          $("#error-msg").text("Please insert all data!");
+          $("#error-msg").text("Please check all data inserted!");
           $("#error-msg").slideDown();
         }
         $("#expression").text(objResult.Expression);
