@@ -9,12 +9,9 @@ $(document).ready(function () {
 
     $.ajax({
       type: "GET",
-      url: "http://localHost:8080/",
-      data: {
-        leftOperand: no1,
-        rightOperand: no2,
-        operation: encodeURI(operation),
-      },
+      url: `http://localHost:8080/leftOperand=${no1}&rightOperand=${no2}&operation=${encodeURI(
+        operation
+      )}`,
       success: function (result) {
         const objResult = JSON.parse(result);
 
