@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <!-- External JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- App CSS -->
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <!-- App JS -->
+    <script type="text/javascript" src="./calculator.js"></script>
+  </head>
+  <body>
+    <div id="input">
+      <div class="operand">
+        <label for="leftNumber">Left Operand</label>
+        <input type="text" id="leftNumber" name="leftNumber" />
+      </div>
+      <ul id="list">
+        <li>
+          <label for="addition"
+            ><input id="addition" type="radio" name="operation" value="+" />+
+            Addition</label
+          >
+        </li>
+        <li>
+          <label for="subtraction"
+            ><input id="subtraction" type="radio" name="operation" value="-" />-
+            Subtraction</label
+          >
+        </li>
+        <li>
+          <label for="multiplication"
+            ><input
+              id="multiplication"
+              type="radio"
+              name="operation"
+              value="*"
+            />* Multiplication</label
+          >
+        </li>
+        <li>
+          <label for="division"
+            ><input id="division" type="radio" name="operation" value="/" />/
+            Division</label
+          >
+        </li>
+        <li>
+          <label for="reminder"
+            ><input id="reminder" type="radio" name="operation" value="%" />%
+            Reminder</label
+          >
+        </li>
+      </ul>
+      <div class="operand">
+        <label for="leftNumber">Right Operand</label>
+        <input type="text" id="rightNumber" name="rightNumber" />
+      </div>
+    </div>
+    <button id="btnCalculate" name="submit" type="submit">Calculate</button>
+    <p id="error-msg">!! ERROR MSG !!</p>
+    <div id="output">
+      <div class="out-row">
+        <p>Expression:</p>
+        <output id="expression" name="expression"></output>
+      </div>
+      <div class="out-row">
+        <p>Result:</p>
+        <output id="result" name="result"></output>
+      </div>
+    </div>
+  </body>
+</html>
